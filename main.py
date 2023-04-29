@@ -13,4 +13,4 @@ filewrite.close()
 
 #launch encrypt function
 encryptionf.fernet_algo()
-time.sleep(13)
+time.sleep(8)
