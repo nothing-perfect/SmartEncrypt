@@ -18,7 +18,7 @@ def fernet_algo():
         with open('smartencrypt.key', 'wb') as filekey:
             filekey.write(key)
             print ("writing key file...")
-            time.sleep(8)
+            time.sleep(4)
             filekey.close()
     except:
         print ("Error creating 'smartencrypt.key'. Does SmartEncrypt have permision to write files here?")
@@ -43,7 +43,7 @@ def fernet_algo():
         with open((originalfile), 'wb') as encfile:
             encfile.write(encrypted)
             print ("writing encrypted file...")
-            time.sleep(8)
+            time.sleep(4)
             encfile.flush()
     except:
         print ("error writing 'encrypted.txt'.  Does SmartEncrypt have permision to write files here?")
