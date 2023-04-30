@@ -4,14 +4,15 @@ import time
 import os
 import base64
 
-def fernet_algo():   
-
+def fernet_algo(): 
+  
+    #get the file to decrypt
     file = open("filelocation.txt", "r")
     originalfile = file.read()
     file.close()
 
 
-    # using the key
+    # getting the key
     print("type in the key from smartencrypt.key.txt which resides in the program directory")
     key = input()
     fernet = Fernet(key)
@@ -26,8 +27,7 @@ def fernet_algo():
     except:
         print ("Key is incorrect")
  
-    # opening the file in write mode and
-    # writing the decrypted data
+    # opening the file in write mode and writing the decrypted data
     try:
         with open((originalfile), 'wb') as dec_file:
             dec_file.write(decrypted)

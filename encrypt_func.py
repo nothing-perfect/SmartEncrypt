@@ -1,15 +1,15 @@
+#import required libs/files
 from cryptography.fernet import Fernet
 import time
 import os
 
-#open text file in read mode
+#get file location
 file = open("filelocation.txt", "r")
 originalfile = file.read()
 file.close()
 
 def fernet_algo():
-    #encryption algorithm 1 aka fernet
-    
+
     #generating the key
     key = Fernet.generate_key()
  
@@ -37,8 +37,7 @@ def fernet_algo():
     # encrypting the file
     encrypted = fernetkey.encrypt(original)
  
-    # opening the file in write mode and
-    # writing the encrypted data
+    # opening the file in write mode and writing the encrypted data
     try:
         with open((originalfile), 'wb') as encfile:
             encfile.write(encrypted)

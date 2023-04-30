@@ -19,6 +19,7 @@ filewrite = open("filelocation.txt", "w")
 filewrite.write((originalfile))
 filewrite.close()
 
+#launch decrypt/encrypt scripts
 print ("encrypt or decrypt?(1 or 2)")
 cryptc = eval(input())
 
