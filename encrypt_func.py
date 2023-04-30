@@ -15,16 +15,16 @@ def fernet_algo():
  
     #writing the key to a file named 'smartencrypt.key'
     try:
-        with open('smartencrypt.key', 'wb') as filekey:
+        with open('smartencrypt.key.txt', 'wb') as filekey:
             filekey.write(key)
             print ("writing key file...")
             time.sleep(4)
             filekey.close()
     except:
-        print ("Error creating 'smartencrypt.key'. Does SmartEncrypt have permision to write files here?")
+        print ("Error creating 'smartencrypt.key.txt'. Does SmartEncrypt have permision to write files here?")
    
     # opening the key
-    with open('smartencrypt.key', 'rb') as filekey:
+    with open('smartencrypt.key.txt','rb') as filekey:
         key = filekey.read()
  
     # using the generated key
