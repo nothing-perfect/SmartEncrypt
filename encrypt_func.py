@@ -31,7 +31,7 @@ def fernet_algo():
     fernetkey = Fernet(key)
  
     # opening the original file to encrypt
-    with open((originalfile),'rb') as file:
+    with open((originalfile), 'rb') as file:
         original = file.read()
      
     # encrypting the file
