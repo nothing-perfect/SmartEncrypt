@@ -12,13 +12,13 @@ import base64
 
 #print info
 print ("SmartEncrypt 2023 nothingperfectsoft. This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions")
-time.sleep(5)
+time.sleep(3)
 
 def main():
     #import file
     try:
         print ("choose a file to encrypt OR decrypt")
-        time.sleep(2)
+        time.sleep(1)
         originalfile = easygui.fileopenbox()
     except:
         print ("no file specified. exiting...")
@@ -34,12 +34,10 @@ def main():
 
     if cryptc == 1:
         #launch encrypt function
-        encryptionf.fernet_algo()
-        time.sleep(3)
+        encryptionf.encrypt_fernet()
     
     else:
         #launch decrypt function
-        decryptionf.fernet_algo()
-        time.sleep(3)
+        decryptionf.decrypt_fernet()
         
 main()

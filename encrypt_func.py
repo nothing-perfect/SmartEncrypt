@@ -4,14 +4,13 @@ import time
 import os
 import subprocess
 import sys
-import main
 
 #get file location
 file = open("filelocation.txt", "r")
 originalfile = file.read()
 file.close()
 
-def fernet_algo():
+def encrypt_fernet():
 
     #generating the key
     key = Fernet.generate_key()
@@ -21,7 +20,6 @@ def fernet_algo():
         with open('smartencrypt.key.txt', 'wb') as filekey:
             filekey.write(key)
             print ("writing key file...")
-            time.sleep(4)
             filekey.close()
     except:
         print ("Error creating 'smartencrypt.key.txt'. Does SmartEncrypt have permision to write files here?")
@@ -45,19 +43,7 @@ def fernet_algo():
         with open((originalfile),'wb') as encfile:
             encfile.write(encrypted)
             print ("writing encrypted file...")
-            time.sleep(4)
-            encfile.flush()
+            encfile.close()
     except:
         print ("error writing 'encrypted.txt'.  Does SmartEncrypt have permision to write files here?")
-    
-    #restart main script
-    print ("would you like to encrypt or decrypt another file? Y or N")
-    choice = input()
-    if choice == "Y":
-        # Run the other script
-        main.main
-    elif choice == "N":
-        print ("Goodbye.")
-        time.sleep(3)
-        sys.exit()
     

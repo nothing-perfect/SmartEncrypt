@@ -3,14 +3,12 @@ from cryptography.fernet import Fernet
 import time
 import os
 import base64
-import main
 
-def fernet_algo(): 
+def decrypt_fernet(): 
   
     #get the file to decrypt
     file = open("filelocation.txt", "r")
     originalfile = file.read()
-    time.sleep(5)
     file.close()
 
 
@@ -34,19 +32,7 @@ def fernet_algo():
         with open((originalfile), 'wb') as dec_file:
             dec_file.write(decrypted)
             print ("writing decrypted file...")
-            time.sleep(5)
             print ("Succesfully wrote decrypted file.")
     except:
      print ("ran into a problem writing decrypted file")
-     
-    #restart main script
-    print ("would you like to encrypt or decrypt another file? Y or N")
-    choice = input()
-    if choice == "Y":
-        # Run the other script
-        main.main
-    elif choice == "N":
-        print ("Goodbye.")
-        time.sleep(3)
-        sys.exit()
     
