@@ -18,7 +18,7 @@ time.sleep(3)
 try:
     print ("choose a file to encrypt OR decrypt")
     time.sleep(1)
-     originalfile = easygui.fileopenbox()
+    originalfile = easygui.fileopenbox()
 except:
     print ("no file specified. exiting...")
 
