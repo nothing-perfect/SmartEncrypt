@@ -1,3 +1,8 @@
+#garbage data here for... reasons(when making a fork delete this)
+a = 1
+b = 2
+c = 3
+abc = ((a) + (b) + (c))
 #import required files/libs and setup varstorage
 import easygui
 import encrypt_func as encryptionf
@@ -10,9 +15,12 @@ print ("SmartEncrypt 2023 nothingperfectsoft. This program comes with ABSOLUTELY
 time.sleep(5)
 
 #import file
-print ("choose a file to encrypt OR decrypt")
-time.sleep(2)
-originalfile = easygui.fileopenbox()
+try:
+    print ("choose a file to encrypt OR decrypt")
+    time.sleep(2)
+    originalfile = easygui.fileopenbox()
+except:
+    print ("no file specified. exiting...")
 
 #save originalfile to be used in other scripts
 filewrite = open("filelocation.txt", "w")
