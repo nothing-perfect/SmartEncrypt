@@ -8,6 +8,8 @@ It is not recommended to download the sourcecode for actual use because it can c
 
 **UPCOMING FEATURES**
 
+-Speed optimizations(reducing time.sleep() by a little)
+
 -Password encryption using [pyAesCrypt](https://pypi.org/project/pyAesCrypt/)
 
 -Improved Linux compatability(currently crashes when encrypting sometimes on linux)
