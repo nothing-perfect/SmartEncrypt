@@ -21,7 +21,10 @@ def fernet_algo():
         encrypted = enc_file.read()
  
     # decrypting the file
-    decrypted = fernet.decrypt(encrypted)
+    try:
+        decrypted = fernet.decrypt(encrypted)
+    except:
+        print ("Key is incorrect")
  
     # opening the file in write mode and
     # writing the decrypted data
