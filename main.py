@@ -5,8 +5,8 @@ c = 3
 abc = ((a) + (b) + (c))
 #import required files/libs and setup varstorage
 import easygui
-import encrypt_func as encryptionf
-import decrypt_func as decryptionf
+import functions.fernet_encrypt_func as encryptionf
+import functions.fernet_decrypt_func as decryptionf
 import time
 import base64
 
