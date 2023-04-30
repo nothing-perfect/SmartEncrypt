@@ -2,6 +2,9 @@
 from cryptography.fernet import Fernet
 import time
 import os
+import subprocess
+import sys
+import main
 
 #get file location
 file = open("filelocation.txt", "r")
@@ -31,7 +34,7 @@ def fernet_algo():
     fernetkey = Fernet(key)
  
     # opening the original file to encrypt
-    with open((originalfile), 'rb') as file:
+    with open((originalfile),'rb') as file:
         original = file.read()
      
     # encrypting the file
@@ -39,10 +42,22 @@ def fernet_algo():
  
     # opening the file in write mode and writing the encrypted data
     try:
-        with open((originalfile), 'wb') as encfile:
+        with open((originalfile),'wb') as encfile:
             encfile.write(encrypted)
             print ("writing encrypted file...")
             time.sleep(4)
             encfile.flush()
     except:
         print ("error writing 'encrypted.txt'.  Does SmartEncrypt have permision to write files here?")
+    
+    #restart main script
+    print ("would you like to encrypt or decrypt another file? Y or N")
+    choice = input()
+    if choice == "Y":
+        # Run the other script
+        main.main
+    elif choice == "N":
+        print ("Goodbye.")
+        time.sleep(3)
+        sys.exit()
+    
