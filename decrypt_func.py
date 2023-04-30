@@ -28,6 +28,6 @@ def fernet_algo():
     try:
         with open((originalfile), 'wb') as dec_file:
             dec_file.write(decrypted)
-            print "Succesfully wrote encrypted file.")
+            print ("Succesfully wrote encrypted file.")
     except:
      print ("ran into a problem writing decrypted file")
