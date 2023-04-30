@@ -33,6 +33,7 @@ def decrypt_fernet():
             dec_file.write(decrypted)
             print ("writing decrypted file...")
             print ("Succesfully wrote decrypted file.")
+            time.sleep(2)
     except:
      print ("ran into a problem writing decrypted file")
     

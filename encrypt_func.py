@@ -44,6 +44,8 @@ def encrypt_fernet():
             encfile.write(encrypted)
             print ("writing encrypted file...")
             encfile.close()
+            print ("success")
+            time.sleep(2)
     except:
         print ("error writing 'encrypted.txt'.  Does SmartEncrypt have permision to write files here?")
     
