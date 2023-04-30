@@ -9,6 +9,7 @@ def fernet_algo():
     #get the file to decrypt
     file = open("filelocation.txt", "r")
     originalfile = file.read()
+    time.sleep(5)
     file.close()
 
 
@@ -31,6 +32,8 @@ def fernet_algo():
     try:
         with open((originalfile), 'wb') as dec_file:
             dec_file.write(decrypted)
+            print ("writing decrypted file...")
+            time.sleep(5)
             print ("Succesfully wrote decrypted file.")
     except:
      print ("ran into a problem writing decrypted file")
