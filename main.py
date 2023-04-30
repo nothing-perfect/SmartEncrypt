@@ -25,9 +25,9 @@ cryptc = eval(input())
 if cryptc == 1:
     #launch encrypt function
     encryptionf.fernet_algo()
-    time.sleep(8)
+    time.sleep(3)
     
 else:
     #launch decrypt function
     decryptionf.fernet_algo()
-    time.sleep(8)
+    time.sleep(3)

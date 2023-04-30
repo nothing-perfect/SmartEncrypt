@@ -12,7 +12,7 @@ def fernet_algo():
 
 
     # using the key
-    print("type in the key from smartencrypt.key.txt")
+    print("type in the key from smartencrypt.key.txt which resides in the program directory")
     key = input()
     fernet = Fernet(key)
  
@@ -28,6 +28,6 @@ def fernet_algo():
     try:
         with open((originalfile), 'wb') as dec_file:
             dec_file.write(decrypted)
-            print ("Succesfully wrote encrypted file.")
+            print ("Succesfully wrote decrypted file.")
     except:
      print ("ran into a problem writing decrypted file")
